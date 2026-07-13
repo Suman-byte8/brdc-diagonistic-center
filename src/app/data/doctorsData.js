@@ -194,13 +194,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "16th May 2026",
+      date: "25th July 2026",
       time: "10:00 AM to 12:00 PM",
-      displayDate: "16th May 2026 (Saturday)",
+      displayDate: "25th July 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>16th May 2026</strong>. Book your slot now!",
+      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>25th July 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -249,7 +249,9 @@ export const detailedDoctors = [
     ],
     avatar: drbarundatta,
   },
+
   // BB Kumar
+
   {
     slug: "dr-bb-kumar",
     name: "Dr. B.B. Kumar",
@@ -271,13 +273,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "28th June 2026",
+      date: "23rd July 2026",
       time: "8:30 AM to 11:30 AM",
-      displayDate: "28th June 2026 (Sunday)",
+      displayDate: "23rd July 2026 (Thursday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>28th June 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>23rd July 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -332,7 +334,9 @@ export const detailedDoctors = [
     ],
     avatar: bbkumar,
   },
+
   // Kundan Kumar
+
   {
     slug: "dr-kundan-kumar",
     name: "Dr. Kundan Kumar",
@@ -354,13 +358,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "06th June 2026",
+      date: "1st August 2026",
       time: "08:30 AM to 10:30 AM",
-      displayDate: "06th June 2026 (Saturday)",
+      displayDate: "1st August 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>06th June 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>1st August 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -405,7 +409,9 @@ export const detailedDoctors = [
     ],
     avatar: drKundanKumar,
   },
+
   // Y Radhakrishna
+
   {
     slug: "dr-y-radhakrishna",
     name: "Dr. Y. Radhakrishna",
@@ -427,13 +433,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "3rd July 2026, 4th July 2026",
+      date: "25th July 2026",
       time: "8:00 AM onwards",
-      displayDate: "3rd July 2026 (Friday), 4th July 2026 (Saturday)",
+      displayDate: "25th July 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>3rd July 2026</strong> and <strong>4th July 2026</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>25th July 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -481,7 +487,9 @@ export const detailedDoctors = [
     ],
     avatar: drYRadhakrishna,
   },
+
   // maitreyee sarkar
+
   {
     slug: "dr-maitreyee-sarkar",
     name: "Dr. Maitreyee Sarkar",
@@ -557,7 +565,9 @@ export const detailedDoctors = [
     ],
     avatar: drMaitreyeeSarkar,
   },
+
   // sarwar hossain
+
   {
     slug: "dr-sarwar-hossain",
     name: "Dr. Sarwar Hossain",
@@ -642,7 +652,8 @@ export const detailedDoctors = [
     avatar: drSarwarHossain,
   },
 
-  // Y Radhakrishna
+  // Sagar Mantri
+
   {
     slug: "dr-sagar-mantri",
     name: "Dr. Sagar Mantri",

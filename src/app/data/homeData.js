@@ -1,10 +1,10 @@
-import drBarunDutta from "../assets/doctorHeroBanner/Dr_Barun_Dutta_Website_Cover.png";
-import drBBKumar from "../assets/doctorHeroBanner/Dr_BB_Kumar_Website_Cover.png";
-import drKundanKumar from "../assets/doctorHeroBanner/Dr_Kundan_Kumar_Website_Cover.png";
-import drYRadhakrishna from "../assets/doctorHeroBanner/Dr_Y_Radhakrishna_Website_Cover.png";
-import drSarwarHossain from "../assets/doctorHeroBanner/Dr_Sarwar_Hossain_Website_Cover.png";
-import drMaitreyeeSarkar from "../assets/doctorHeroBanner/Dr_Maitreyee_Sarkar_Website_Cover.png";
-import drSagarMantri from "../assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_Cover.jpg";
+import drBarunDutta from "@/app/assets/doctorHeroBanner/Dr_Barun_Dutta_Website_cover.jpg";
+import drBBKumar from "@/app/assets/doctorHeroBanner/Dr_BB_Kumar_Website_cover.jpg";
+import drKundanKumar from "@/app/assets/doctorHeroBanner/Dr_Kundan_Kumar_Website_cover.jpg";
+import drYRadhakrishna from "@/app/assets/doctorHeroBanner/Dr_Y_Radhakrishna_Website_cover.jpg";
+import drSarwarHossain from "@/app/assets/doctorHeroBanner/Dr_Sarwar_Hossain_Website_cover.jpg";
+import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar_Website_cover.jpg";
+import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg";
 
 // Feature Images
 import healthCheck from "@/app/assets/homeFeature/healthCheck.png";
@@ -14,12 +14,12 @@ import medicalProfessional from "@/app/assets/homeFeature/medicalProfessional.pn
 import inHouseMedicine from "@/app/assets/homeFeature/inHouseMedicine.png";
 
 export const heroBanners = [
-  // {
-  //   id: 1,
-  //   imageSrc: drBarunDutta,
-  //   link: "/our-doctors/dr-barun-datta",
-  //   altText: "Dr. Barun Dutta Banner",
-  // },
+  {
+    id: 1,
+    imageSrc: drBarunDutta,
+    link: "/our-doctors/dr-barun-datta",
+    altText: "Dr. Barun Dutta Banner",
+  },
   {
     id: 2,
     imageSrc: drBBKumar,
@@ -50,12 +50,12 @@ export const heroBanners = [
     link: "/our-doctors/dr-sarwar-hossain",
     altText: "Dr. Sarwar Hossain Banner",
   },
-  {
-    id: 7,
-    imageSrc: drSagarMantri,
-    link: "/our-doctors/dr-sagar-mantri",
-    altText: "Dr. Sagar Mantri Banner",
-  },
+  // {
+  //   id: 7,
+  //   imageSrc: drSagarMantri,
+  //   link: "/our-doctors/dr-sagar-mantri",
+  //   altText: "Dr. Sagar Mantri Banner",
+  // },
 ];
 
 export const featuresData = [
