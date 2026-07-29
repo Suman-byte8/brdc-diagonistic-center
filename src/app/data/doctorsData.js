@@ -194,13 +194,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "25th July 2026",
+      date: "23rd August 2026",
       time: "10:00 AM to 12:00 PM",
-      displayDate: "25th July 2026 (Saturday)",
+      displayDate: "23rd August 2026 (Sunday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>25th July 2026</strong>. Book your slot now!",
+      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>23rd August 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -273,13 +273,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "23rd July 2026",
+      date: "30th August 2026",
       time: "8:30 AM to 11:30 AM",
-      displayDate: "23rd July 2026 (Thursday)",
+      displayDate: "30th August 2026 (Sunday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>23rd July 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>30th August 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -433,13 +433,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "25th July 2026",
+      date: "22nd August 2026",
       time: "8:00 AM onwards",
-      displayDate: "25th July 2026 (Saturday)",
+      displayDate: "22nd August 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>25th July 2026</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>22nd August 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
