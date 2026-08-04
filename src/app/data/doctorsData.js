@@ -6,6 +6,9 @@ import drYRadhakrishna from "../assets/doctors/DR-Y-Radhakrishna.png";
 import drMaitreyeeSarkar from "../assets/doctors/DR-Maitreyee-Sarkar.png";
 import drSarwarHossain from "../assets/doctors/DR-Sarwar-Hossain.png";
 import drSagarMantri from "../assets/doctors/DR-Sagar-Mantri.png";
+import drMahendram from "../assets/doctors/DR-Mahendra_M.png";
+import drKunalHaldar from "../assets/doctors/DR-Kunal_Halder.png";
+
 
 export const doctorsData = [
   {
@@ -728,5 +731,163 @@ export const detailedDoctors = [
       { icon: "check_circle", title: "Digestive Cancers" },
     ],
     avatar: drSagarMantri,
+  },
+
+  // Mahendra M
+  {
+    slug: "dr-mahendra-m",
+    name: "Dr. Mahendra M",
+    displayName: "DR. MAHENDRA M",
+    specialty: "CONSULTANT NEUROSURGEON",
+    credentials: [
+      { name: "MBBS", type: "normal" },
+      { name: "MS (General Surgery)", type: "normal" },
+      { name: "MCh (Neuro Surgery)", type: "highlight" },
+    ],
+    metaItems: [
+      { icon: "work_history", text: "13 Years Experience" },
+      { icon: "local_hospital", text: "Consultant Neurosurgeon, B.R Diagnostic Centre" },
+    ],
+    hospital: "B.R Diagnostic Centre Pvt Ltd",
+    location: {
+      name: "B.R Diagnostic Centre - Malda",
+      address: "3 No. Govt Colony, (Near NCC Quarter)",
+      city: "Malda-732101, West Bengal, India",
+    },
+    appointment: {
+      date: "22nd August 2026",
+      time: "10:00 AM",
+      displayDate: "22nd August 2026",
+    },
+    notice: {
+      title: "Special Consultation Camp at Malda",
+      text: "Dr. Mahendra M, Consultant Neurosurgeon will be available for consultation at B.R Diagnostic Centre, Malda on <strong>22nd August 2026</strong>. Book your slot now!",
+    },
+    appointmentTypes: [
+      { value: "", label: "Select Type" },
+      { value: "First Consultation", label: "First Consultation" },
+      { value: "Follow-up Visit", label: "Follow-up Visit" },
+      {
+        value: "Neurosurgery Consultation",
+        label: "Neurosurgery Consultation",
+      },
+      { value: "Pain Management", label: "Pain Management" },
+    ],
+    concernAreas: [
+      "Headache / Migraine",
+      "Spine / Back Pain",
+      "Brain Tumor",
+      "Nerve Related Issues",
+      "Neurological Disorders",
+      "Other",
+    ],
+    medicalHistory: {
+      label: "Any Previous Surgeries?",
+      name: "procedure_history",
+      options: [
+        { value: "Yes", label: "Yes" },
+        { value: "No", label: "No", checked: true },
+      ],
+    },
+    trustCredentials: [
+      { icon: "school", title: "MBBS, MS, MCh", subtitle: "Medical Graduate" },
+      {
+        icon: "work_history",
+        title: "13+ Years",
+        subtitle: "Experience",
+      },
+      { icon: "medical_services", title: "Neurosurgeon", subtitle: "Consultant" },
+    ],
+    specializations: [
+      { icon: "psychology", title: "Brain Tumor Surgery" },
+      { icon: "accessibility_new", title: "Spine Surgery" },
+      { icon: "bloodtype", title: "Vascular Neurosurgery" },
+      { icon: "healing", title: "Peripheral Nerve Surgery" },
+      { icon: "emergency", title: "Neurocritical Care" },
+    ],
+    specialtyInterests: [
+      { icon: "check_circle", title: "Advanced Brain Tumor Surgeries" },
+      { icon: "check_circle", title: "Complex Spine Procedures" },
+    ],
+    avatar: drMahendram,
+  },
+
+  // Kunal Haldar
+  {
+    slug: "dr-kunal-haldar",
+    name: "Dr. Kunal Haldar",
+    displayName: "DR. KUNAL HALDAR",
+    specialty: "CONSULTANT NEPHROLOGIST",
+    credentials: [
+      { name: "MBBS Hons", type: "normal" },
+      { name: "MD Medicine", type: "normal" },
+      { name: "DM Nephrology", type: "highlight" },
+    ],
+    metaItems: [
+      { icon: "work_history", text: "Consultant Nephrologist" },
+      { icon: "local_hospital", text: "B.R Diagnostic Centre" },
+    ],
+    hospital: "B.R Diagnostic Centre Pvt Ltd",
+    location: {
+      name: "B.R Diagnostic Centre - Malda",
+      address: "3 No. Govt Colony, (Near NCC Quarter)",
+      city: "Malda-732101, West Bengal, India",
+    },
+    appointment: {
+      date: "8th August 2026",
+      time: "10:00 AM",
+      displayDate: "8th August 2026",
+    },
+    notice: {
+      title: "Special Consultation Camp at Malda",
+      text: "Dr. Kunal Haldar, DM (Nephrology) will be available for consultation at B.R Diagnostic Centre, Malda on <strong>8th August 2026</strong>. Book your slot now!",
+    },
+    appointmentTypes: [
+      { value: "", label: "Select Type" },
+      { value: "First Consultation", label: "First Consultation" },
+      { value: "Follow-up Visit", label: "Follow-up Visit" },
+      {
+        value: "Dialysis Guidance",
+        label: "Dialysis Guidance",
+      },
+      { value: "Hypertension Management", label: "Hypertension Management" },
+    ],
+    concernAreas: [
+      "Kidney Disease",
+      "Kidney Stones",
+      "Urinary Disorders",
+      "Hypertension",
+      "Dialysis Guidance",
+      "Other",
+    ],
+    medicalHistory: {
+      label: "Any Previous Surgeries?",
+      name: "procedure_history",
+      options: [
+        { value: "Yes", label: "Yes" },
+        { value: "No", label: "No", checked: true },
+      ],
+    },
+    trustCredentials: [
+      { icon: "school", title: "MBBS Hons, MD, DM", subtitle: "Medical Graduate" },
+      {
+        icon: "medical_services",
+        title: "Nephrologist",
+        subtitle: "Consultant",
+      },
+      { icon: "local_hospital", title: "DM Nephrology", subtitle: "Specialist" },
+    ],
+    specializations: [
+      { icon: "bloodtype", title: "Kidney Disease" },
+      { icon: "healing", title: "Kidney Stones" },
+      { icon: "water_drop", title: "Urinary Disorders" },
+      { icon: "monitor_heart", title: "Hypertension" },
+      { icon: "medical_services", title: "Dialysis Guidance" },
+    ],
+    specialtyInterests: [
+      { icon: "check_circle", title: "Early Kidney Disease Diagnosis" },
+      { icon: "check_circle", title: "Comprehensive Dialysis Care" },
+    ],
+    avatar: drKunalHaldar,
   },
 ];

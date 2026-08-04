@@ -5,6 +5,8 @@ import drYRadhakrishna from "@/app/assets/doctorHeroBanner/Dr_Y_Radhakrishna_Web
 import drSarwarHossain from "@/app/assets/doctorHeroBanner/Dr_Sarwar_Hossain_Website_cover.jpg";
 import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar_Website_cover.jpg";
 import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg";
+import drMahendram from "@/app/assets/doctorHeroBanner/Dr_Mahendra_M_Website_cover.jpg";
+import drKunalHaldar from "@/app/assets/doctorHeroBanner/Dr_Kunal_Haldar_Website_cover.jpg";
 
 // Feature Images
 import healthCheck from "@/app/assets/homeFeature/healthCheck.png";
@@ -56,6 +58,18 @@ export const heroBanners = [
   //   link: "/our-doctors/dr-sagar-mantri",
   //   altText: "Dr. Sagar Mantri Banner",
   // },
+  {
+     id: 8,
+    imageSrc: drMahendram,
+    link: "/our-doctors/dr-mahendra-m",
+    altText: "Dr. Mahendram Banner",
+  },
+  {
+    id:9,
+    imageSrc: drKunalHaldar,
+    link: "/our-doctors/dr-kunal-haldar",
+    altText: "Dr. Kunal Haldar Banner",
+  }
 ];
 
 export const featuresData = [
