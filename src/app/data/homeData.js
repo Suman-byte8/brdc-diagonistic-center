@@ -7,6 +7,7 @@ import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar
 import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg";
 import drMahendram from "@/app/assets/doctorHeroBanner/Dr_Mahendra_M_Website_cover.jpg";
 import drKunalHaldar from "@/app/assets/doctorHeroBanner/Dr_Kunal_Haldar_Website_cover.jpg";
+import drMrinalMandal from "@/app/assets/doctorHeroBanner/Dr_Mrinal_Mandal_Website_cover.jpg";
 
 // Feature Images
 import healthCheck from "@/app/assets/homeFeature/healthCheck.png";
@@ -52,24 +53,30 @@ export const heroBanners = [
     link: "/our-doctors/dr-sarwar-hossain",
     altText: "Dr. Sarwar Hossain Banner",
   },
-  // {
-  //   id: 7,
-  //   imageSrc: drSagarMantri,
-  //   link: "/our-doctors/dr-sagar-mantri",
-  //   altText: "Dr. Sagar Mantri Banner",
-  // },
   {
-     id: 8,
+    id: 7,
+    imageSrc: drSagarMantri,
+    link: "/our-doctors/dr-sagar-mantri",
+    altText: "Dr. Sagar Mantri Banner",
+  },
+  {
+    id: 8,
     imageSrc: drMahendram,
     link: "/our-doctors/dr-mahendra-m",
     altText: "Dr. Mahendram Banner",
   },
   {
-    id:9,
+    id: 9,
     imageSrc: drKunalHaldar,
     link: "/our-doctors/dr-kunal-haldar",
     altText: "Dr. Kunal Haldar Banner",
-  }
+  },
+  {
+    id: 10,
+    imageSrc: drMrinalMandal,
+    link: "/our-doctors/dr-mrinal-mandal",
+    altText: "Dr. Mrinal Mandal Banner",
+  },
 ];
 
 export const featuresData = [
