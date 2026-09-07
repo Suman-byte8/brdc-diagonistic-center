@@ -2,10 +2,13 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. Redirect to trailing slash for directories
-  # If the request doesn't have a trailing slash and is not a file
+  # 1. Redirect to trailing slash for page directories
+  # Exclude static asset paths (Next.js chunks, images, fonts) from trailing slash redirect
+  # to prevent 404s on /_next/static/ files.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteCond %{REQUEST_URI} !^/_next/
+  RewriteCond %{REQUEST_URI} !\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|webp|avif|map|json)$
   RewriteRule ^(.*)$ $1/ [L,R=301]
 
   # 2. Handle subdirectories with index.html (Next.js trailingSlash: true export)

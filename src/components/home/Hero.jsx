@@ -15,10 +15,17 @@ import 'swiper/css/effect-fade';
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
+  const displayedBanners = heroBanners.filter((banner) => banner.display);
 
   useEffect(() => {
+    // Mounting gate: set once after hydration to avoid SSR/Swiper mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
+
+  if (displayedBanners.length === 0) {
+    return null;
+  }
 
   if (!mounted) {
     return <div className="w-full aspect-[2/1] bg-slate-900" />;
@@ -42,7 +49,7 @@ export default function Hero() {
         navigation={true}
         className="mySwiper aspect-[2/1]"
       >
-        {heroBanners.map((banner) => (
+        {displayedBanners.map((banner) => (
           <SwiperSlide key={banner.id}>
             <Link href={banner.link} className="block w-full h-full relative">
               <Image 

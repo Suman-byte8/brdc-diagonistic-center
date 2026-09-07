@@ -107,7 +107,7 @@ export default function TestList() {
           </div>
           <h3 className="text-xl font-semibold text-gray-900 mb-2">No tests found</h3>
           <p className="text-gray-500 max-w-md mx-auto">
-            We couldn't find any tests matching your search. Try adjusting your search terms or category filter.
+            We couldn&apos;t find any tests matching your search. Try adjusting your search terms or category filter.
           </p>
           <button 
             onClick={() => { setSearchTerm(''); setSelectedCategory('All'); }}

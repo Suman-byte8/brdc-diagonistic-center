@@ -65,7 +65,7 @@ export default function Milestones() {
                 {/* CONTENT */}
                 <div className="relative z-10 bg-white px-2">
                    <p className="text-gray-600 text-sm leading-relaxed mb-10 h-20 flex items-center justify-center italic max-w-[280px]">
-                    "{item.text}"
+                    &quot;{item.text}&quot;
                   </p>
                 </div>
 

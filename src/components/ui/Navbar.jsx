@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Link href="/book-your-appointment">
-              <button className="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition shadow-lg whitespace-nowrap">
+              <button suppressHydrationWarning className="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition shadow-lg whitespace-nowrap">
                 Book An Appointment
               </button>
             </Link>

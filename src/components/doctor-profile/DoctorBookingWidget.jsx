@@ -166,7 +166,7 @@ export default function DoctorBookingWidget({ doctor }) {
 
             <section className="card tabs-container">
               <div className="tabs-nav" role="tablist">
-                <button className="tab-btn active" role="tab">
+                <button className="tab-btn active" role="tab" suppressHydrationWarning>
                   Book An Appointment
                 </button>
               </div>
@@ -220,6 +220,7 @@ export default function DoctorBookingWidget({ doctor }) {
                           Full Name
                         </label>
                         <input
+                          suppressHydrationWarning
                           type="text"
                           id="drFullName"
                           name="fullName"
@@ -243,6 +244,7 @@ export default function DoctorBookingWidget({ doctor }) {
                         <div className="phone-input-group">
                           <span className="phone-prefix">+91</span>
                           <input
+                            suppressHydrationWarning
                             type="tel"
                             id="drPhone"
                             name="phone"
@@ -273,6 +275,7 @@ export default function DoctorBookingWidget({ doctor }) {
                             location_on
                           </span>
                           <input
+                            suppressHydrationWarning
                             type="text"
                             id="drLocation"
                             name="patientLocation"
@@ -336,6 +339,7 @@ export default function DoctorBookingWidget({ doctor }) {
                               calendar_today
                             </span>
                             <input
+                              suppressHydrationWarning
                               type="text"
                               id="drDate"
                               name="appointmentDate"
@@ -354,6 +358,7 @@ export default function DoctorBookingWidget({ doctor }) {
                             Appointment Type
                           </label>
                           <select
+                            suppressHydrationWarning
                             id="drType"
                             name="appointmentType"
                             className="form-select"
@@ -432,6 +437,7 @@ export default function DoctorBookingWidget({ doctor }) {
                     <div className="cta-section">
                       <div className="cta-wrapper">
                         <button
+                          suppressHydrationWarning
                           type="submit"
                           id='whatsapp-book-btn'
                           className="btn btn-primary btn-xl" 

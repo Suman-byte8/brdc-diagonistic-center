@@ -4,7 +4,7 @@ import drKundanKumar from "@/app/assets/doctorHeroBanner/Dr_Kundan_Kumar_Website
 import drYRadhakrishna from "@/app/assets/doctorHeroBanner/Dr_Y_Radhakrishna_Website_cover.jpg";
 import drSarwarHossain from "@/app/assets/doctorHeroBanner/Dr_Sarwar_Hossain_Website_cover.jpg";
 import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar_Website_cover.jpg";
-import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg";
+// import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg"; // (commented out - banner hidden temporarily)
 import drMahendram from "@/app/assets/doctorHeroBanner/Dr_Mahendra_M_Website_cover.jpg";
 import drKunalHaldar from "@/app/assets/doctorHeroBanner/Dr_Kunal_Haldar_Website_cover.jpg";
 import drMrinalMandal from "@/app/assets/doctorHeroBanner/Dr_Mrinal_Mandal_Website_cover.jpg";
@@ -19,60 +19,70 @@ import inHouseMedicine from "@/app/assets/homeFeature/inHouseMedicine.png";
 export const heroBanners = [
   {
     id: 1,
+    display: true,
     imageSrc: drBarunDutta,
     link: "/our-doctors/dr-barun-datta",
     altText: "Dr. Barun Dutta Banner",
   },
   {
     id: 2,
+    display: true,
     imageSrc: drBBKumar,
     link: "/our-doctors/dr-bb-kumar",
     altText: "Dr. BB Kumar Banner",
   },
   {
     id: 3,
+    display: true,
     imageSrc: drKundanKumar,
     link: "/our-doctors/dr-kundan-kumar",
     altText: "Dr. Kundan Kumar Banner",
   },
   {
     id: 4,
+    display: false,
     imageSrc: drYRadhakrishna,
     link: "/our-doctors/dr-y-radhakrishna",
     altText: "Dr. Y Radhakrishna Banner",
   },
   {
     id: 5,
+    display: true,
     imageSrc: drMaitreyeeSarkar,
     link: "/our-doctors/dr-maitreyee-sarkar",
     altText: "Dr. Maitreyee Sarkar Banner",
   },
   {
     id: 6,
+    display: true,
     imageSrc: drSarwarHossain,
     link: "/our-doctors/dr-sarwar-hossain",
     altText: "Dr. Sarwar Hossain Banner",
   },
-  {
-    id: 7,
-    imageSrc: drSagarMantri,
-    link: "/our-doctors/dr-sagar-mantri",
-    altText: "Dr. Sagar Mantri Banner",
-  },
+  // {
+  //   id: 7,
+  //   display: false,
+  //   imageSrc: drSagarMantri,
+  //   link: "/our-doctors/dr-sagar-mantri",
+  //   altText: "Dr. Sagar Mantri Banner",
+  // },
   {
     id: 8,
+    display: false,
     imageSrc: drMahendram,
     link: "/our-doctors/dr-mahendra-m",
     altText: "Dr. Mahendram Banner",
   },
   {
     id: 9,
+    display: false,
     imageSrc: drKunalHaldar,
     link: "/our-doctors/dr-kunal-haldar",
     altText: "Dr. Kunal Haldar Banner",
   },
   {
     id: 10,
+    display: true,
     imageSrc: drMrinalMandal,
     link: "/our-doctors/dr-mrinal-mandal",
     altText: "Dr. Mrinal Mandal Banner",

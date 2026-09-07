@@ -69,6 +69,7 @@ export default function AppointmentForm() {
         <div className="flex flex-col">
           <label className="text-sm font-semibold mb-2 text-gray-600">Patient Full Name</label>
           <input
+            suppressHydrationWarning
             type="text"
             id="pName"
             placeholder="Enter name"
@@ -83,6 +84,7 @@ export default function AppointmentForm() {
           <div className="flex flex-col">
             <label className="text-sm font-semibold mb-2 text-gray-600">Phone Number</label>
             <input
+              suppressHydrationWarning
               type="text"
               id="pPhone"
               placeholder="Contact number"
@@ -94,6 +96,7 @@ export default function AppointmentForm() {
           <div className="flex flex-col">
             <label className="text-sm font-semibold mb-2 text-gray-600">Email Address</label>
             <input
+              suppressHydrationWarning
               type="email"
               id="pEmail"
               placeholder="Enter email address"
@@ -107,6 +110,7 @@ export default function AppointmentForm() {
         <div className="flex flex-col">
           <label className="text-sm font-semibold mb-2 text-gray-600">Patient Type</label>
           <select
+            suppressHydrationWarning
             id="pType"
             className="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:border-green-500 transition-all outline-none"
             onChange={handleChange}
@@ -120,6 +124,7 @@ export default function AppointmentForm() {
         <div className="flex flex-col">
           <label className="text-sm font-semibold mb-2 text-gray-600">Select Primary Service</label>
           <select
+            suppressHydrationWarning
             id="serviceMain"
             required
             className="w-full p-4 bg-gray-50 border border-gray-200 rounded-lg focus:border-green-500 transition-all outline-none"
@@ -200,6 +205,7 @@ export default function AppointmentForm() {
         </AnimatePresence>
 
         <button
+          suppressHydrationWarning
           type="button"
           onClick={sendWhatsApp}
           className="w-full p-5 bg-green-600 text-white font-bold rounded-lg shadow-lg hover:bg-green-700 hover:-translate-y-1 transition-all"

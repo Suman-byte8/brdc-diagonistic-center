@@ -33,6 +33,7 @@ export default function ContactForm() {
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
           <input 
+            suppressHydrationWarning
             type="text" 
             className={`w-full p-3 border rounded-lg outline-none transition ${errors.name ? 'border-red-500' : 'border-gray-200 focus:border-green-500'}`}
             onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -43,6 +44,7 @@ export default function ContactForm() {
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Phone Number</label>
           <input 
+            suppressHydrationWarning
             type="number" 
             className={`w-full p-3 border rounded-lg outline-none transition ${errors.phone ? 'border-red-500' : 'border-gray-200 focus:border-green-500'}`}
             onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -53,6 +55,7 @@ export default function ContactForm() {
         <div>
           <label className="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
           <input 
+            suppressHydrationWarning
             type="email" 
             className={`w-full p-3 border rounded-lg outline-none transition ${errors.email ? 'border-red-500' : 'border-gray-200 focus:border-green-500'}`}
             onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -70,7 +73,7 @@ export default function ContactForm() {
           {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
         </div>
 
-        <button type="submit" className="w-full bg-green-600 text-white font-bold py-4 rounded-lg hover:bg-green-700 transition shadow-lg flex items-center justify-center gap-2 group">
+        <button suppressHydrationWarning type="submit" className="w-full bg-green-600 text-white font-bold py-4 rounded-lg hover:bg-green-700 transition shadow-lg flex items-center justify-center gap-2 group">
            <FaWhatsapp className="text-xl group-hover:scale-110 transition" /> Submit via WhatsApp <FaPaperPlane className="text-xs opacity-50" />
         </button>
       </div>
