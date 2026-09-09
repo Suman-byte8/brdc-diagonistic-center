@@ -8,6 +8,7 @@ import drSarwarHossain from "../assets/doctors/DR-Sarwar-Hossain.png";
 import drSagarMantri from "../assets/doctors/DR-Sagar-Mantri.png";
 import drMahendram from "../assets/doctors/DR-Mahendra_M.png";
 import drKunalHaldar from "../assets/doctors/DR-Kunal_Halder.png";
+import drMohitNahata from "../assets/doctors/DR-Mohit-Nahata.png";
 
 
 export const doctorsData = [
@@ -167,6 +168,11 @@ export const doctorsData = [
         name: "Dr. Jishan Azad",
         info: "M.B.B.S., M.S. (Orthopaedics)",
         timing: "",
+      },
+      {
+        name: "Dr. Mohit Nahata",
+        info: "MBBS, DNB (Orthopedics), Joint Replacement and Arthroscopy Specialist",
+        timing: "9.00 AM onwards, 26/09/2026",
       },
     ],
   },
@@ -436,13 +442,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "05/09/2026",
+      date: "19/09/2026",
       time: "8:00 AM onwards",
-      displayDate: "05/09/2026 (Saturday)",
+      displayDate: "19/09/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>05/09/2026</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>19/09/2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -489,6 +495,81 @@ export const detailedDoctors = [
       { icon: "check_circle", title: "Digestive Cancers" },
     ],
     avatar: drYRadhakrishna,
+  },
+
+  // Mohit Nahata
+
+  {
+    slug: "dr-mohit-nahata",
+    name: "Dr. Mohit Nahata",
+    displayName: "DR. MOHIT NAHATA",
+    specialty: "CONSULTANT ORTHOPEDIC TRAUMA & JOINT SPECIALIST",
+    credentials: [
+      { name: "MBBS", type: "normal" },
+      { name: "DNB (Orthopedics)", type: "normal" },
+      { name: "Fellowship in Robotic Joint Replacement", type: "highlight" },
+      { name: "Fellowship in Arthroscopy & Sports Medicine", type: "highlight" },
+    ],
+    metaItems: [
+      { icon: "work_history", text: "9+ Years Experience" },
+      { icon: "medical_services", text: "Orthopedic Trauma & Joint Specialist" },
+    ],
+    hospital: "Even Hospital, HBR Layout; Koshys Hospital, TC Palya",
+    location: {
+      name: "Bengaluru Consultation Locations",
+      address: "Even Hospital, HBR Layout; Koshys Hospital, TC Palya",
+      city: "Bengaluru",
+    },
+    appointment: {
+      date: "26/09/2026",
+      time: "9.00 AM onwards",
+      displayDate: "26/09/2026 (Saturday)",
+    },
+    notice: {
+      title: "Consultation Details",
+      text: "Dr. Mohit Nahata is a Consultant Orthopedic Trauma and Joint Specialist at <strong>Even Hospital, HBR Layout</strong> and <strong>Koshys Hospital, TC Palya</strong>. He is also a Visiting Consultant at Manipal Hospital (Yeshwantpur & Yelahanka), Sparsh Hospital (Yeshwantpur & Hennur), and Fortis Hospital (Yeshwantpur & Cunningham Rd.). Consultation date: <strong>26/09/2026 (Saturday)</strong>, from <strong>9.00 AM onwards</strong>.",
+    },
+    appointmentTypes: [
+      { value: "", label: "Select Type" },
+      { value: "First Consultation", label: "First Consultation" },
+      { value: "Follow-up Visit", label: "Follow-up Visit" },
+      { value: "Joint Replacement Consultation", label: "Joint Replacement Consultation" },
+      { value: "Arthroscopy and Sports Medicine", label: "Arthroscopy and Sports Medicine" },
+      { value: "Trauma Consultation", label: "Trauma Consultation" },
+    ],
+    concernAreas: [
+      "Knee Pain",
+      "Hip Pain",
+      "Sports Injury",
+      "Fracture or Trauma",
+      "Joint Replacement",
+      "Other",
+    ],
+    medicalHistory: {
+      label: "Any Previous Surgeries?",
+      name: "procedure_history",
+      options: [
+        { value: "Yes", label: "Yes" },
+        { value: "No", label: "No", checked: true },
+      ],
+    },
+    trustCredentials: [
+      { icon: "school", title: "MBBS, DNB", subtitle: "Orthopedics" },
+      { icon: "smart_toy", title: "Robotic Joint Replacement", subtitle: "Fellowship" },
+      { icon: "sports_medicine", title: "Arthroscopy & Sports Medicine", subtitle: "Fellowship" },
+    ],
+    specializations: [
+      { icon: "healing", title: "Orthopedic Trauma" },
+      { icon: "accessibility_new", title: "Joint Replacement" },
+      { icon: "sports_medicine", title: "Arthroscopy & Sports Medicine" },
+      { icon: "medical_services", title: "Robotic Joint Replacement" },
+    ],
+    specialtyInterests: [
+      { icon: "local_hospital", title: "Even Hospital, HBR Layout" },
+      { icon: "local_hospital", title: "Koshys Hospital, TC Palya" },
+      { icon: "check_circle", title: "Visiting Consultant at Manipal, Sparsh & Fortis Hospitals" },
+    ],
+    avatar: drMohitNahata,
   },
 
   // maitreyee sarkar

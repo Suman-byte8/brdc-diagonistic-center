@@ -8,6 +8,7 @@ import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar
 import drMahendram from "@/app/assets/doctorHeroBanner/Dr_Mahendra_M_Website_cover.jpg";
 import drKunalHaldar from "@/app/assets/doctorHeroBanner/Dr_Kunal_Haldar_Website_cover.jpg";
 import drMrinalMandal from "@/app/assets/doctorHeroBanner/Dr_Mrinal_Mandal_Website_cover.jpg";
+import drMohitNahata from "@/app/assets/doctorHeroBanner/Dr_Mohit_Nahata_Website_cover.jpg";
 
 // Feature Images
 import healthCheck from "@/app/assets/homeFeature/healthCheck.png";
@@ -40,7 +41,7 @@ export const heroBanners = [
   },
   {
     id: 4,
-    display: false,
+    display: true,
     imageSrc: drYRadhakrishna,
     link: "/our-doctors/dr-y-radhakrishna",
     altText: "Dr. Y Radhakrishna Banner",
@@ -86,6 +87,13 @@ export const heroBanners = [
     imageSrc: drMrinalMandal,
     link: "/our-doctors/dr-mrinal-mandal",
     altText: "Dr. Mrinal Mandal Banner",
+  },
+  {
+    id: 11,
+    display: true,
+    imageSrc: drMohitNahata,
+    link: "/our-doctors/dr-mohit-nahata",
+    altText: "Dr. Mohit Nahata Banner",
   },
 ];
 
