@@ -9,6 +9,7 @@ import drSagarMantri from "../assets/doctors/DR-Sagar-Mantri.png";
 import drMahendram from "../assets/doctors/DR-Mahendra_M.png";
 import drKunalHaldar from "../assets/doctors/DR-Kunal_Halder.png";
 import drMohitNahata from "../assets/doctors/DR-Mohit-Nahata.png";
+import drMrinalMandal from "../assets/doctors/DR-Mrinal-Mandal.png";
 
 
 export const doctorsData = [
@@ -970,5 +971,107 @@ export const detailedDoctors = [
       { icon: "check_circle", title: "Comprehensive Dialysis Care" },
     ],
     avatar: drKunalHaldar,
+  },
+
+  // Mrinal Mandal
+  {
+    slug: "dr-mrinal-mandal",
+    name: "Dr. Mrinal Mandal",
+    displayName: "DR. MRINAL MANDAL",
+    specialty: "PHYSIOTHERAPIST & REHABILITATION SPECIALIST",
+    credentials: [
+      { name: "BPT", type: "normal" },
+      { name: "MPT (Musculoskeletal)", type: "normal" },
+      { name: "Certified Cupping Therapist", type: "highlight" },
+      { name: "Certified Kinesio Taping Practitioner", type: "highlight" },
+    ],
+    metaItems: [
+      { icon: "local_hospital", text: "B.R Diagnostic Centre" },
+    ],
+    hospital: "B.R Diagnostic Centre Pvt Ltd",
+    location: {
+      name: "B.R Diagnostic Centre - Malda",
+      address: "3 No. Govt Colony, (Near NCC Quarter)",
+      city: "Malda-732101, West Bengal, India",
+    },
+    appointment: {
+      date: "Thursday & Sunday",
+      time: "10:00 AM onwards",
+      displayDate: "Thursday & Sunday",
+    },
+    notice: {
+      title: "Physiotherapy & Rehabilitation Consultation",
+      text: "Dr. Mrinal Mandal will be available for consultation at B.R Diagnostic Centre, Malda on <strong>Thursday & Sunday from 10:00 AM onwards</strong>. Book your slot now!",
+    },
+    appointmentTypes: [
+      { value: "", label: "Select Type" },
+      { value: "First Consultation", label: "First Consultation" },
+      { value: "Follow-up Visit", label: "Follow-up Visit" },
+      {
+        value: "Physiotherapy Assessment",
+        label: "Physiotherapy Assessment",
+      },
+      { value: "Rehabilitation Planning", label: "Rehabilitation Planning" },
+      { value: "Pain Management Session", label: "Pain Management Session" },
+      { value: "Cupping Therapy", label: "Cupping Therapy" },
+    ],
+    concernAreas: [
+      "Back Pain",
+      "Neck Pain",
+      "Shoulder Pain",
+      "Knee Pain",
+      "Ankle Pain",
+      "Frozen Shoulder",
+      "Tennis Elbow",
+      "Sports Injuries",
+      "Post-Surgery Rehab",
+      "Stroke Rehabilitation",
+      "Pediatric Rehabilitation",
+      "Other",
+    ],
+    medicalHistory: {
+      label: "Any Previous Physiotherapy Treatment?",
+      name: "procedure_history",
+      options: [
+        { value: "Yes", label: "Yes" },
+        { value: "No", label: "No", checked: true },
+      ],
+    },
+    trustCredentials: [
+      {
+        icon: "school",
+        title: "BPT, MPT (Musculoskeletal)",
+        subtitle: "Medical Graduate",
+      },
+      {
+        icon: "verified",
+        title: "Certified Cupping Therapist",
+        subtitle: "International Certification",
+      },
+      {
+        icon: "verified",
+        title: "Kinesio Taping Certified",
+        subtitle: "Advanced Practitioner",
+      },
+      {
+        icon: "work_history",
+        title: "12+ Years",
+        subtitle: "Clinical Experience",
+      },
+    ],
+    specializations: [
+      { icon: "accessibility_new", title: "Musculoskeletal Physiotherapy" },
+      { icon: "healing", title: "Pain Management" },
+      { icon: "favorite", title: "Sports Rehabilitation" },
+      { icon: "child_care", title: "Pediatric Rehabilitation" },
+      { icon: "psychology", title: "Neurological Rehabilitation" },
+      { icon: "spa", title: "Cupping Therapy" },
+    ],
+    specialtyInterests: [
+      { icon: "check_circle", title: "Chronic Pain Management" },
+      { icon: "check_circle", title: "Post-Operative Rehabilitation" },
+      { icon: "check_circle", title: "Pediatric Neurological Conditions" },
+    ],
+    avatar: drMrinalMandal,
   },
 ];
