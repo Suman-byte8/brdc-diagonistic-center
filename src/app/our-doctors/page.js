@@ -1,13 +1,27 @@
 import Link from "next/link";
 import DoctorsHero from "@/components/our-doctors/DoctorsHero";
 import DoctorCard from "@/components/our-doctors/DoctorCard";
-import { doctorsData } from "@/app/data/doctorsData";
+import { detailedDoctors, doctorsData } from "@/app/data/doctorsData";
+import { heroBanners } from "@/app/data/homeData";
 
 export const metadata = {
   title: "Our Specialized Doctors",
   description:
     "Consult with highly experienced medical professionals in Malda. Our team includes Gynecologists, Surgeons, Cardiologists, Pediatricians, and more at BRDC.",
 };
+
+const activeBannerBySlug = new Map(
+  heroBanners
+    .filter((banner) => banner.display)
+    .map((banner) => [banner.link.split("/").pop(), banner.link])
+);
+
+function getDoctorProfile(doctorName) {
+  const normalizedName = doctorName.replace("Dr. MD ", "Dr. ");
+  return detailedDoctors.find(
+    (doctor) => doctor.name === doctorName || doctor.name === normalizedName
+  );
+}
 
 export default function DoctorsPage() {
   return (
@@ -25,12 +39,23 @@ export default function DoctorsPage() {
             {/* Grid for Doctors */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               {section.doctors.map((doc, dIdx) => (
-                <DoctorCard
-                  key={dIdx}
-                  name={doc.name}
-                  info={doc.info}
-                  timing={doc.timing}
-                />
+                (() => {
+                  const profile = getDoctorProfile(doc.name);
+                  const bannerLink = profile
+                    ? activeBannerBySlug.get(profile.slug)
+                    : undefined;
+
+                  return (
+                    <DoctorCard
+                      key={dIdx}
+                      name={doc.name}
+                      info={doc.info}
+                      timing={doc.timing}
+                      date={profile?.appointment?.displayDate || profile?.appointment?.date}
+                      href={bannerLink}
+                    />
+                  );
+                })()
               ))}
             </div>
           </div>

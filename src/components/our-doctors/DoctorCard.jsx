@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
-export default function DoctorCard({ name, info, timing }) {
+export default function DoctorCard({ name, info, timing, date, href }) {
   return (
     <motion.div 
       whileHover={{ y: -5 }}
@@ -14,7 +15,20 @@ export default function DoctorCard({ name, info, timing }) {
         </svg>
       </div>
 
-      <h4 className="text-lg font-bold text-green-700 mb-2">{name}</h4>
+      <h4 className="text-lg font-bold text-green-700 mb-2">
+        {href ? (
+          <Link href={href} className="hover:underline">
+            {name}
+          </Link>
+        ) : (
+          name
+        )}
+      </h4>
+      {date && (
+        <p className="text-[12px] text-green-600 font-bold mb-1">
+          Date: {date}
+        </p>
+      )}
       <p className="text-[13px] text-red-700 font-medium leading-snug mb-1">
         {info}
       </p>
