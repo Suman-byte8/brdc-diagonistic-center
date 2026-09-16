@@ -25,7 +25,7 @@ jobs:
       - name: 🏗️ Build and Export Project
         run: npm run deploy
 
-      - name: 🚀 Deploy via SFTP
+      - name: 🚀 Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -33,8 +33,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: /
-          protocol: sftp          # SFTP is more reliable than FTPS on Hostinger
-          port: 22
+          protocol: ftp           # Regular FTP account on Hostinger
+          port: 21
           timeout: 60000          # Increased timeout to prevent socket timeouts
           security: loose         # Accepts self-signed certs (common on shared hosts)
           exclude: |
