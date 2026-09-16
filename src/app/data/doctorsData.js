@@ -129,6 +129,11 @@ export const doctorsData = [
         info: "M.D. Medicine (PGI), D.M. Gastroenterology (SGPGI), Fellow in Transplant Hepatology (New York, USA), Fellow in Therapeutic Endoscopy, La Paz, South America",
         timing: "",
       },
+      {
+        name: "Dr. Sagar Mantri",
+        info: "M.B.B.S., M.D. (General Medicine), D.M. (Gastroenterology)",
+        timing: "28th June 2026, 8:00 AM onwards",
+      },
     ],
   },
 
@@ -154,6 +159,36 @@ export const doctorsData = [
         name: "Dr. MD Sarwar Hossain",
         info: "Doctor of Medicine (MD) in Paediatrics",
         timing: "",
+      },
+    ],
+  },
+  {
+    category: "Neurosurgeons",
+    doctors: [
+      {
+        name: "Dr. Mahendra M",
+        info: "M.B.B.S., M.S. (General Surgery), M.Ch (Neuro Surgery)",
+        timing: "4th October 2026, 10:00 AM",
+      },
+    ],
+  },
+  {
+    category: "Nephrologists",
+    doctors: [
+      {
+        name: "Dr. Kunal Haldar",
+        info: "M.B.B.S. Hons, M.D. Medicine, D.M. Nephrology",
+        timing: "05/09/2026, 10:00 AM",
+      },
+    ],
+  },
+  {
+    category: "Physiotherapists",
+    doctors: [
+      {
+        name: "Dr. Mrinal Mandal",
+        info: "B.P.T., M.P.T. (Musculoskeletal), Certified Cupping Therapist, Certified Kinesio Taping Practitioner",
+        timing: "Thursday & Sunday, 10:00 AM onwards",
       },
     ],
   },
@@ -837,13 +872,13 @@ export const detailedDoctors = [
       city: "Malda-732101, West Bengal, India",
     },
     appointment: {
-      date: "22nd August 2026",
+      date: "4th October 2026",
       time: "10:00 AM",
-      displayDate: "22nd August 2026",
+      displayDate: "4th October 2026",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Mahendra M, Consultant Neurosurgeon will be available for consultation at B.R Diagnostic Centre, Malda on <strong>22nd August 2026</strong>. Book your slot now!",
+      text: "Dr. Mahendra M, Consultant Neurosurgeon will be available for consultation at B.R Diagnostic Centre, Malda on <strong>4th October 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },

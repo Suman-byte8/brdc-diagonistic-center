@@ -69,7 +69,7 @@ export const heroBanners = [
   // },
   {
     id: 8,
-    display: false,
+    display: true,
     imageSrc: drMahendram,
     link: "/our-doctors/dr-mahendra-m",
     altText: "Dr. Mahendram Banner",
