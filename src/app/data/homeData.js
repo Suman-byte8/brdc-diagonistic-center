@@ -41,7 +41,7 @@ export const heroBanners = [
   },
   {
     id: 4,
-    display: true,
+    display: false,
     imageSrc: drYRadhakrishna,
     link: "/our-doctors/dr-y-radhakrishna",
     altText: "Dr. Y Radhakrishna Banner",
