@@ -76,7 +76,7 @@ export const heroBanners = [
   },
   {
     id: 9,
-    display: false,
+    display: true,
     imageSrc: drKunalHaldar,
     link: "/our-doctors/dr-kunal-haldar",
     altText: "Dr. Kunal Haldar Banner",

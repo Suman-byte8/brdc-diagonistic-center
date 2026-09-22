@@ -951,13 +951,13 @@ export const detailedDoctors = [
       city: "Malda-732101, West Bengal, India",
     },
     appointment: {
-      date: "05/09/2026",
+      date: "10/10/2026",
       time: "10:00 AM",
-      displayDate: "05/09/2026 (Saturday)",
+      displayDate: "10/10/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kunal Haldar, DM (Nephrology) will be available for consultation at B.R Diagnostic Centre, Malda on <strong>05/09/2026</strong>. Book your slot now!",
+      text: "Dr. Kunal Haldar, DM (Nephrology) will be available for consultation at B.R Diagnostic Centre, Malda on <strong>10/10/2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
