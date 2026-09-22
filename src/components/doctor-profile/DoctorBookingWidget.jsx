@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./DoctorBookingWidget.css";
+import { trackDataLayerEvent } from "@/lib/analytics";
 
 export default function DoctorBookingWidget({ doctor }) {
   const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ export default function DoctorBookingWidget({ doctor }) {
     concern_area: [],
   });
   const [message, setMessage] = useState(null);
+  const isSubmittingRef = useRef(false);
 
   const handleCheckbox = (value) => {
     setFormData((prev) => ({
@@ -40,6 +42,12 @@ export default function DoctorBookingWidget({ doctor }) {
       });
       return;
     }
+
+    // Guard against duplicate leads from rapid double-clicks/double submits.
+    if (isSubmittingRef.current) {
+      return;
+    }
+    isSubmittingRef.current = true;
 
     // WhatsApp Integration
     const targetWhatsAppNumber = "917029243525";
@@ -72,22 +80,13 @@ export default function DoctorBookingWidget({ doctor }) {
     )}`;
     window.open(whatsappUrl, "_blank");
 
-    // ── Lead Tracking ───────────────────────────────────────────────
+    // ── GTM Tracking ────────────────────────────────────────────────
     // Only fires here — AFTER validation passes and WhatsApp opens.
     // A plain button click or failed validation never reaches this point.
-    if (typeof fbq !== "undefined") {
-      fbq("track", "Lead", {
-        content_name: `Doctor Booking – ${doctor.name}`,
-        content_category: doctor.specialty,
-      });
-    }
-    if (typeof window !== "undefined" && Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({
-        event: "whatsapp_booking_lead",
-        doctor_name: doctor.name,
-        doctor_specialty: doctor.specialty,
-      });
-    }
+    // This is both the successful appointment submission and the WhatsApp
+    // appointment action, since this form's only submission path is WhatsApp.
+    trackDataLayerEvent("appointment_form_submit", { doctor_name: doctor.name });
+    trackDataLayerEvent("whatsapp_appointment_click", { doctor_name: doctor.name });
     // ────────────────────────────────────────────────────────────────
 
     setMessage({
@@ -105,6 +104,8 @@ export default function DoctorBookingWidget({ doctor }) {
       procedure_history: "No",
       concern_area: [],
     });
+
+    isSubmittingRef.current = false;
   };
 
   return (
