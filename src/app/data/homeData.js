@@ -90,7 +90,7 @@ export const heroBanners = [
   },
   {
     id: 11,
-    display: true,
+    display: false,
     imageSrc: drMohitNahata,
     link: "/our-doctors/dr-mohit-nahata",
     altText: "Dr. Mohit Nahata Banner",

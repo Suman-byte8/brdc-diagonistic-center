@@ -178,7 +178,7 @@ export const doctorsData = [
       {
         name: "Dr. Kunal Haldar",
         info: "M.B.B.S. Hons, M.D. Medicine, D.M. Nephrology",
-        timing: "05/09/2026, 10:00 AM",
+        timing: "10th October 2026, 10:00 AM",
       },
     ],
   },
@@ -239,13 +239,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "26th September 2026",
+      date: "14th November 2026",
       time: "10:00 AM to 12:00 PM",
-      displayDate: "26th September 2026 (Friday)",
+      displayDate: "14th November 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>26th September 2026</strong>. Book your slot now!",
+      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>14th November 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -318,13 +318,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "29th September 2026",
+      date: "29th October 2026",
       time: "8:30 AM to 11:30 AM",
-      displayDate: "29th September 2026 (Monday)",
+      displayDate: "29th October 2026 (Thursday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>29th September 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>29th October 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -478,13 +478,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "19/09/2026",
+      date: "10th October 2026",
       time: "8:00 AM onwards",
-      displayDate: "19/09/2026 (Saturday)",
+      displayDate: "10th October 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>19/09/2026</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>10th October 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -951,13 +951,13 @@ export const detailedDoctors = [
       city: "Malda-732101, West Bengal, India",
     },
     appointment: {
-      date: "10/10/2026",
+      date: "10th October 2026",
       time: "10:00 AM",
-      displayDate: "10/10/2026 (Saturday)",
+      displayDate: "10th October 2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kunal Haldar, DM (Nephrology) will be available for consultation at B.R Diagnostic Centre, Malda on <strong>10/10/2026</strong>. Book your slot now!",
+      text: "Dr. Kunal Haldar, DM (Nephrology) will be available for consultation at B.R Diagnostic Centre, Malda on <strong>10th October 2026</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
