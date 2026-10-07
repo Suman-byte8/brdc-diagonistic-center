@@ -1,4 +1,5 @@
 import PrivacySection from "@/components/privacy-policy/PrivacySection";
+import PageHero from "@/components/ui/PageHero";
 
 export const metadata = {
   title: "Privacy Policy",
@@ -7,15 +8,9 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="bg-slate-50 min-h-screen">
-      {/* Simple Breadcrumb / Top spacing */}
-      <div className="bg-green-700 py-12 text-center text-white">
-        <h2 className="text-3xl font-bold uppercase tracking-widest">Legal Information</h2>
-      </div>
-      
-      <PrivacySection
-       />
-      
-    </main>
+    <div className="bg-white">
+      <PageHero crumb="Privacy Policy" title="Legal Information" titleAs="h2" />
+      <PrivacySection />
+    </div>
   );
 }
