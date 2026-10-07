@@ -27,43 +27,42 @@ export default function Hero() {
     return null;
   }
 
-  if (!mounted) {
-    return <div className="w-full aspect-[2/1] bg-slate-900" />;
-  }
-
   return (
-    <section className="relative w-full bg-slate-900">
-      <Swiper
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
-        spaceBetween={0}
-        slidesPerView={1}
-        effect="fade"
-        loop={true}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        className="mySwiper aspect-[2/1]"
-      >
-        {displayedBanners.map((banner) => (
-          <SwiperSlide key={banner.id}>
-            <Link href={banner.link} className="block w-full h-full relative">
-              <Image 
-                src={banner.imageSrc}
-                alt={banner.altText}
-                fill
-                className="object-cover"
-                priority={banner.id === 1}
-                sizes="100vw"
-              />
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <section className="relative bg-gradient-to-br from-brdc-offwhite via-brdc-pale to-brdc-mint">
+      <div className="w-full">
+        <div className="relative overflow-hidden">
+          {mounted ? (
+            <Swiper
+              modules={[Autoplay, Pagination, Navigation, EffectFade]}
+              spaceBetween={0}
+              slidesPerView={1}
+              effect="fade"
+              loop={true}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              navigation={true}
+              className="mySwiper w-full aspect-[2/1]"
+            >
+              {displayedBanners.map((banner) => (
+                <SwiperSlide key={banner.id}>
+                  <Link href={banner.link} className="block w-full h-full relative">
+                    <Image
+                      src={banner.imageSrc}
+                      alt={banner.altText}
+                      fill
+                      className="object-cover"
+                      priority={banner.id === 1}
+                      sizes="100vw"
+                    />
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="w-full aspect-[2/1] bg-gradient-to-br from-brdc-pale to-brdc-mint" />
+          )}
+        </div>
+      </div>
     </section>
   );
 }
