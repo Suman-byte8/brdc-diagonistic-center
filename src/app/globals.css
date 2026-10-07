@@ -1,19 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brdc-primary: #0F4D3A;
+  --color-brdc-forest: #0F4D3A;
+  --color-brdc-dark: #0A3A2B;
+  --color-brdc-secondary: #1B6B4F;
+  --color-brdc-soft: #E8F5EC;
+  --color-brdc-pale: #F3FAF5;
+  --color-brdc-mint: #DDF2E4;
+  --color-brdc-offwhite: #F5F6F5;
+  --color-brdc-text: #1F2A26;
+  --color-brdc-text-secondary: #647168;
+  --color-brdc-border: #E2E9E3;
+  --color-brdc-gold: #E6B445;
+  --color-brdc-gold-dark: #C99A2E;
+
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
 /* Swiper Overrides */
 .swiper-button-next, .swiper-button-prev {
   color: white !important;
-  transform: scale(0.6);
+  width: 46px !important;
+  height: 46px !important;
+  margin-top: -23px !important;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(10, 58, 43, 0.35);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: rgba(15, 77, 58, 0.9);
+  border-color: #E6B445;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 16px !important;
+  font-weight: 800;
 }
 .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
   background: white;
-  opacity: 0.5;
+  opacity: 0.75;
+  box-shadow: 0 0 0 1px rgba(10, 58, 43, 0.45);
 }
 .swiper-pagination-bullet-active {
-  background: white !important;
+  background: #E6B445 !important;
   opacity: 1 !important;
 }
 
@@ -38,3 +75,41 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Scroll reveal (landing page) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal[data-shown="true"] {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Reviews: continuous right-to-left slide (list is duplicated, so -50% loops seamlessly) */
+@keyframes reviews-slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.reviews-track {
+  animation: reviews-slide 45s linear infinite;
+}
+.reviews-marquee:hover .reviews-track,
+.reviews-marquee:focus-within .reviews-track {
+  animation-play-state: paused;
+}
+/* Keep moving for reduced-motion users too (e.g. Windows "Animation effects" off), just gentler */
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track { animation-duration: 80s; }
+}
+
+/* FAQ: hide the native disclosure marker */
+.faq-item summary::-webkit-details-marker { display: none; }
