@@ -1,42 +1,80 @@
-"use client";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
+import { CalendarDays, Clock, ArrowRight } from "lucide-react";
 
-export default function DoctorCard({ name, info, timing, date, href }) {
+function initials(name) {
+  return name
+    .replace(/^Dr\.?\s*/i, "")
+    .replace(/\(.*?\)/g, "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
+export default function DoctorCard({ name, info, timing, date, href, avatar }) {
   return (
-    <motion.div 
-      whileHover={{ y: -5 }}
-      className="relative pt-8 pb-6 px-4 border-2 border-green-600 rounded-2xl bg-white flex flex-col items-center text-center shadow-sm"
-    >
-      {/* Top Icon Badge */}
-      <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-green-700 rounded-full flex items-center justify-center border-4 border-white shadow-md">
-        <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
-        </svg>
+    <article className="group relative h-full flex flex-col rounded-xl border border-brdc-border bg-white overflow-hidden shadow-[0_8px_30px_-18px_rgba(15,77,58,0.25)] hover:-translate-y-1 hover:border-brdc-primary/30 hover:shadow-[0_18px_40px_-18px_rgba(15,77,58,0.35)] transition-all duration-300">
+      {/* Header band with avatar */}
+      <div className="relative h-20 bg-gradient-to-br from-brdc-dark via-brdc-forest to-brdc-secondary">
+        <div aria-hidden="true" className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-brdc-gold/15 blur-2xl"></div>
+      </div>
+      <div className="relative -mt-10 px-6">
+        <div className="w-20 h-20 rounded-full ring-4 ring-white shadow-[0_8px_20px_-8px_rgba(15,77,58,0.5)] overflow-hidden bg-gradient-to-br from-brdc-soft to-brdc-mint flex items-center justify-center">
+          {avatar ? (
+            <Image
+              src={avatar}
+              alt={name}
+              width={80}
+              height={80}
+              sizes="80px"
+              className="w-full h-full object-cover object-top"
+            />
+          ) : (
+            <span aria-hidden="true" className="font-serif text-2xl font-bold text-brdc-primary">
+              {initials(name)}
+            </span>
+          )}
+        </div>
       </div>
 
-      <h4 className="text-lg font-bold text-green-700 mb-2">
-        {href ? (
-          <Link href={href} className="hover:underline">
-            {name}
-          </Link>
-        ) : (
-          name
+      <div className="flex-1 flex flex-col px-6 pt-4 pb-6">
+        <h4 className="font-serif text-lg font-semibold leading-snug text-brdc-forest mb-1.5">
+          {name}
+        </h4>
+        <p className="text-sm leading-6 text-brdc-text-secondary">{info}</p>
+
+        {(date || timing) && (
+          <div className="mt-4 space-y-2 rounded-lg bg-brdc-pale border border-brdc-border/70 px-3.5 py-3">
+            {date && (
+              <p className="flex items-start gap-2 text-[13px] font-semibold text-brdc-primary">
+                <CalendarDays className="w-4 h-4 shrink-0 mt-0.5 text-brdc-gold-dark" strokeWidth={1.75} />
+                <span>Date: {date}</span>
+              </p>
+            )}
+            {timing && (
+              <p className="flex items-start gap-2 text-[13px] font-medium text-brdc-primary">
+                <Clock className="w-4 h-4 shrink-0 mt-0.5 text-brdc-gold-dark" strokeWidth={1.75} />
+                <span>{timing}</span>
+              </p>
+            )}
+          </div>
         )}
-      </h4>
-      {date && (
-        <p className="text-[12px] text-green-600 font-bold mb-1">
-          Date: {date}
-        </p>
-      )}
-      <p className="text-[13px] text-red-700 font-medium leading-snug mb-1">
-        {info}
-      </p>
-      {timing && (
-        <p className="text-[12px] text-green-600 font-bold italic">
-          {timing}
-        </p>
-      )}
-    </motion.div>
+
+        {href && (
+          <div className="mt-auto pt-5">
+            <Link
+              href={href}
+              className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-brdc-primary border-b border-brdc-gold pb-1 hover:text-brdc-gold-dark transition-colors after:absolute after:inset-0"
+            >
+              View Profile
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" strokeWidth={2} />
+            </Link>
+          </div>
+        )}
+      </div>
+    </article>
   );
 }

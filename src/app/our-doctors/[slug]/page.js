@@ -1,8 +1,8 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FaChevronRight, FaLock } from "react-icons/fa";
+import { Lock } from "lucide-react";
 import { detailedDoctors } from "@/app/data/doctorsData";
 import DoctorBookingWidget from "@/components/doctor-profile/DoctorBookingWidget";
+import DoctorProfileHero from "@/components/doctor-profile/DoctorProfileHero";
 
 export async function generateStaticParams() {
   return detailedDoctors.map((doc) => ({
@@ -19,30 +19,25 @@ export default async function DoctorProfilePage({ params }) {
   }
 
   return (
-    <main className="bg-white min-h-screen">
-      {/* Breadcrumbs */}
-      <div className="max-w-7xl mx-auto px-4 md:px-8 pt-10">
-        <nav className="flex flex-wrap items-center gap-2 mb-10 text-sm font-bold">
-          <Link href="/" className="text-slate-400 hover:text-[#00a63e] transition-colors">Home</Link>
-          <FaChevronRight className="text-slate-300 text-[10px]" />
-          <Link href="/our-doctors" className="text-slate-400 hover:text-[#00a63e] transition-colors">Our Doctors</Link>
-          <FaChevronRight className="text-slate-300 text-[10px]" />
-          <span className="text-slate-900">{doctor.name}</span>
-        </nav>
+    <div className="bg-white">
+      <DoctorProfileHero doctor={doctor} />
 
-        <DoctorBookingWidget doctor={doctor} />
+      <div className="bg-gradient-to-b from-brdc-offwhite via-white to-brdc-offwhite">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12 sm:py-16">
+          <DoctorBookingWidget doctor={doctor} />
+        </div>
       </div>
 
       {/* Trust Footer */}
-      <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-10 text-center px-4">
-        <div className="flex items-center justify-center gap-2 text-slate-500 mb-2">
-          <FaLock className="text-lg" />
-          <span className="text-sm font-bold uppercase tracking-widest">Secure & HIPAA Compliant</span>
+      <div className="border-t border-brdc-border bg-brdc-offwhite py-10 px-6 text-center">
+        <div className="flex items-center justify-center gap-2 text-brdc-primary mb-2">
+          <Lock className="w-4 h-4" strokeWidth={2} />
+          <span className="text-xs font-bold uppercase tracking-[0.2em]">Secure &amp; HIPAA Compliant</span>
         </div>
-        <p className="text-xs text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xs text-brdc-text-secondary max-w-2xl mx-auto leading-relaxed">
           Your personal and medical information is encrypted and transmitted securely. We strictly adhere to HIPAA regulations and national healthcare standards to protect patient privacy and data integrity.
         </p>
-      </footer>
-    </main>
+      </div>
+    </div>
   );
 }

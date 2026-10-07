@@ -10,25 +10,25 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-gray-50 pb-20">
+    <div className="bg-gradient-to-b from-brdc-offwhite via-white to-brdc-offwhite pb-16 sm:pb-24">
       <ContactHero />
 
-      <div className="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
-        <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pt-14 sm:pt-20">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
           
           {/* Contact Info Sidebar */}
-          <div className="md:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <ContactInfo />
           </div>
 
           {/* Form Area */}
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2 order-1 lg:order-2">
             <ContactForm />
           </div>
         </div>
       </div>
 
       <MapSection />
-    </main>
+    </div>
   );
 }

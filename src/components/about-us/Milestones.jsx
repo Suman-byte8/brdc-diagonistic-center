@@ -1,100 +1,37 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Reveal from "@/components/ui/Reveal";
 import { milestonesData } from "@/app/data/aboutData";
 
 export default function Milestones() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.3 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold text-green-700 inline-block border-b-4 border-green-500 pb-2 mb-20"
-        >
-          Milestones Achieved By Us
-        </motion.h2>
+    <section className="py-16 sm:py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
+        <Reveal className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brdc-gold-dark mb-3">Milestones</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold leading-tight text-brdc-forest">
+            Milestones Achieved By Us
+          </h2>
+        </Reveal>
 
-        <div className="relative">
-          {/* THE FIX: Adjusted top position and z-index */}
-          {/* This line now sits at 40px (center of the 80px icon) */}
-          <motion.div 
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="absolute top-10 left-0 w-full h-1 bg-red-400 z-0 hidden md:block origin-left"
-          />
+        <ol className="relative grid md:grid-cols-3 gap-10 md:gap-8">
+          {/* Timeline rail */}
+          <span aria-hidden="true" className="hidden md:block absolute top-7 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-brdc-gold to-transparent"></span>
+          <span aria-hidden="true" className="md:hidden absolute left-7 top-0 bottom-0 w-px bg-gradient-to-b from-brdc-gold via-brdc-gold/60 to-transparent"></span>
 
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-12 relative z-10"
-          >
-            {milestonesData.map((item, idx) => (
-              <motion.div 
-                key={idx} 
-                variants={itemVariants}
-                className="flex flex-col items-center"
-              >
-                {/* ICON BOX: Added relative z-10 and solid bg-white to "cut" the red line */}
-                <div className="relative z-10 w-20 h-20 bg-white border-2 border-green-600 rounded-2xl flex items-center justify-center text-3xl shadow-sm mb-8 transition-transform hover:scale-110">
-                  {item.icon}
-                </div>
-
-                {/* CONTENT */}
-                <div className="relative z-10 bg-white px-2">
-                   <p className="text-gray-600 text-sm leading-relaxed mb-10 h-20 flex items-center justify-center italic max-w-[280px]">
-                    &quot;{item.text}&quot;
-                  </p>
-                </div>
-
-                {/* YEAR BUBBLE */}
-                <div className="relative z-10 bg-green-700 text-white text-2xl font-black px-10 py-3 rounded-full border-4 border-white shadow-lg">
+          {milestonesData.map((item, idx) => (
+            <Reveal as="li" key={idx} delay={idx * 120} className="relative flex md:flex-col items-start md:items-center gap-5 md:gap-0 md:text-center">
+              <span className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-brdc-primary to-brdc-secondary text-white flex items-center justify-center text-xl shadow-[0_8px_20px_-8px_rgba(15,77,58,0.6)] ring-4 ring-white md:mb-6">
+                {item.icon}
+              </span>
+              <div className="flex-1 md:w-full bg-gradient-to-br from-white to-brdc-pale rounded-xl border border-brdc-border p-6 shadow-[0_8px_30px_-18px_rgba(15,77,58,0.25)] hover:-translate-y-1 transition-transform duration-300">
+                <p className="font-serif text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brdc-gold-dark to-brdc-gold mb-2">
                   {item.year}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+                </p>
+                <p className="text-sm leading-7 text-brdc-text-secondary italic">&quot;{item.text}&quot;</p>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
       </div>
-
-      {/* Mobile Vertical Line */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .grid::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #f87171;
-            z-index: 0;
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 }
