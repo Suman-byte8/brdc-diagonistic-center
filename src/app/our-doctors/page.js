@@ -26,8 +26,10 @@ function getDoctorProfile(doctorName) {
 // Flatten each department's doctors into plain props for the client directory.
 const sections = doctorsData.map((section) => ({
   category: section.category,
-  doctors: section.doctors.map((doc) => {
+  doctors: section.doctors.flatMap((doc) => {
     const profile = getDoctorProfile(doc.name);
+    if (profile?.disabled) return [];
+
     return {
       name: doc.name,
       info: doc.info,
@@ -37,7 +39,7 @@ const sections = doctorsData.map((section) => ({
       avatar: profile?.avatar || null,
     };
   }),
-}));
+})).filter((section) => section.doctors.length > 0);
 
 export default function DoctorsPage() {
   return (

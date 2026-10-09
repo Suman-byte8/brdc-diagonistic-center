@@ -3,8 +3,12 @@ import {
   ArrowRight, ArrowUpRight, Stethoscope, Baby, Brain, Bone, Ear, Droplets,
   Activity, Scissors, Dumbbell, Ribbon, Pill, Flower2,
 } from "lucide-react";
-import { doctorsData } from "@/app/data/doctorsData";
+import { detailedDoctors, doctorsData } from "@/app/data/doctorsData";
 import Reveal from "@/components/ui/Reveal";
+
+const disabledDoctorNames = new Set(
+  detailedDoctors.filter((doctor) => doctor.disabled).map((doctor) => doctor.name)
+);
 
 // A distinct icon per department; falls back to the stethoscope.
 const categoryIcons = {
@@ -45,7 +49,9 @@ export default function DoctorsPreview() {
         </Reveal>
 
         <div className="flex flex-wrap justify-center gap-4">
-          {doctorsData.map((section) => {
+          {doctorsData
+            .filter((section) => section.doctors.some((doctor) => !disabledDoctorNames.has(doctor.name)))
+            .map((section) => {
             const Icon = categoryIcons[section.category] || Stethoscope;
             return (
               <Link

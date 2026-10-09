@@ -5,7 +5,7 @@ import DoctorBookingWidget from "@/components/doctor-profile/DoctorBookingWidget
 import DoctorProfileHero from "@/components/doctor-profile/DoctorProfileHero";
 
 export async function generateStaticParams() {
-  return detailedDoctors.map((doc) => ({
+  return detailedDoctors.filter((doc) => !doc.disabled).map((doc) => ({
     slug: doc.slug,
   }));
 }
@@ -14,7 +14,7 @@ export default async function DoctorProfilePage({ params }) {
   const { slug } = await params;
   const doctor = detailedDoctors.find((d) => d.slug === slug);
 
-  if (!doctor) {
+  if (!doctor || doctor.disabled) {
     notFound();
   }
 

@@ -403,13 +403,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "03/10/2026",
+      date: "7th November 2026",
       time: "08:30 AM to 10:30 AM",
-      displayDate: "03/10/2026 (Saturday)",
+      displayDate: "7th November 2026 (1st Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>03/10/2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>7th November 2026 (1st Saturday)</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -537,6 +537,7 @@ export const detailedDoctors = [
 
   {
     slug: "dr-mohit-nahata",
+    disabled: true,
     name: "Dr. Mohit Nahata",
     displayName: "DR. MOHIT NAHATA",
     specialty: "CONSULTANT ORTHOPEDIC TRAUMA & JOINT SPECIALIST",
@@ -776,6 +777,7 @@ export const detailedDoctors = [
 
   {
     slug: "dr-sagar-mantri",
+    disabled: true,
     name: "Dr. Sagar Mantri",
     displayName: "DR. SAGAR MANTRI",
     specialty: "GASTROENTEROLOGIST",
@@ -853,6 +855,7 @@ export const detailedDoctors = [
   // Mahendra M
   {
     slug: "dr-mahendra-m",
+    disabled: true,
     name: "Dr. Mahendra M",
     displayName: "DR. MAHENDRA M",
     specialty: "CONSULTANT NEUROSURGEON",

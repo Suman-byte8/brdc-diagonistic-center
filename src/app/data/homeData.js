@@ -34,7 +34,7 @@ export const heroBanners = [
   },
   {
     id: 3,
-    display: true,
+    display: false,
     imageSrc: drKundanKumar,
     link: "/our-doctors/dr-kundan-kumar",
     altText: "Dr. Kundan Kumar Banner",
@@ -69,7 +69,7 @@ export const heroBanners = [
   // },
   {
     id: 8,
-    display: true,
+    display: false,
     imageSrc: drMahendram,
     link: "/our-doctors/dr-mahendra-m",
     altText: "Dr. Mahendram Banner",
