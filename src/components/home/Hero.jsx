@@ -21,7 +21,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden bg-brdc-soft">
-      <div className="relative w-full aspect-[2/1]">
+      <div className="relative w-full aspect-[1280/450]">
         <Swiper
           onSwiper={(swiper) => { swiperRef.current = swiper; }}
           onSlideChange={(swiper) => setActiveIdx(swiper.realIndex)}

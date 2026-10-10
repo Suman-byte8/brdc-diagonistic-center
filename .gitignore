@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/fetched_content.json
 
 # debug
 npm-debug.log*

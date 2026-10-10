@@ -22,25 +22,30 @@
 .hide-scrollbar::-webkit-scrollbar { display: none; }
 .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Swiper Overrides */
+/* Swiper Overrides — Premium Circle Arrows */
+.mySwiper {
+  --swiper-navigation-size: 18px;
+}
 .swiper-button-next, .swiper-button-prev {
-  color: white !important;
-  width: 46px !important;
-  height: 46px !important;
-  margin-top: -23px !important;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  background: rgba(10, 58, 43, 0.35);
-  backdrop-filter: blur(4px);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  color: #0F4D3A !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: -24px !important;
+  border-radius: 50%;
+  border: 2px solid #0F4D3A;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease, transform 0.18s ease;
 }
 .swiper-button-next:hover, .swiper-button-prev:hover {
-  background: rgba(15, 77, 58, 0.9);
-  border-color: #E6B445;
+  background: #0F4D3A;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(15, 77, 58, 0.4);
+  transform: scale(1.1);
 }
 .swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 16px !important;
-  font-weight: 800;
+  font-size: 10px !important;
+  font-weight: 900;
 }
 .swiper-pagination-bullet {
   width: 8px;
