@@ -2,6 +2,7 @@ import drBarunDutta from "@/app/assets/doctorHeroBanner/Dr_Barun_Dutta_Website_c
 import drBBKumar from "@/app/assets/doctorHeroBanner/Dr_BB_Kumar_Website_cover.jpg";
 import drKundanKumar from "@/app/assets/doctorHeroBanner/Dr_Kundan_Kumar_Website_cover.jpg";
 import drYRadhakrishna from "@/app/assets/doctorHeroBanner/Dr_Y_Radhakrishna_Website_cover.jpg";
+import drChayanKumarRoy from "@/app/assets/doctorHeroBanner/Dr_Chayan_Kumar_Roy_Website_cover.jpg";
 import drSarwarHossain from "@/app/assets/doctorHeroBanner/Dr_Sarwar_Hossain_Website_cover.jpg";
 import drMaitreyeeSarkar from "@/app/assets/doctorHeroBanner/Dr_Maitreyee_Sarkar_Website_cover.jpg";
 // import drSagarMantri from "@/app/assets/doctorHeroBanner/Dr_Sagar_Mantri_Website_cover.jpg"; // (commented out - banner hidden temporarily)
@@ -34,14 +35,14 @@ export const heroBanners = [
   },
   {
     id: 3,
-    display: false,
+    display: true,
     imageSrc: drKundanKumar,
     link: "/our-doctors/dr-kundan-kumar",
     altText: "Dr. Kundan Kumar Banner",
   },
   {
     id: 4,
-    display: false,
+    display: true,
     imageSrc: drYRadhakrishna,
     link: "/our-doctors/dr-y-radhakrishna",
     altText: "Dr. Y Radhakrishna Banner",
@@ -49,12 +50,19 @@ export const heroBanners = [
   {
     id: 5,
     display: true,
+    imageSrc: drChayanKumarRoy,
+    link: "/our-doctors/dr-chayan-kumar-roy",
+    altText: "Dr. Chayan Kumar Roy Banner",
+  },
+  {
+    id: 6,
+    display: true,
     imageSrc: drMaitreyeeSarkar,
     link: "/our-doctors/dr-maitreyee-sarkar",
     altText: "Dr. Maitreyee Sarkar Banner",
   },
   {
-    id: 6,
+    id: 7,
     display: true,
     imageSrc: drSarwarHossain,
     link: "/our-doctors/dr-sarwar-hossain",

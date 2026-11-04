@@ -1,7 +1,7 @@
 import CTABanner from "@/components/ui/CTABanner";
 import DoctorsHero from "@/components/our-doctors/DoctorsHero";
 import DoctorsDirectory from "@/components/our-doctors/DoctorsDirectory";
-import { detailedDoctors, doctorsData } from "@/app/data/doctorsData";
+import { detailedDoctors, doctorsData, isDoctorLive } from "@/app/data/doctorsData";
 import { heroBanners } from "@/app/data/homeData";
 
 export const metadata = {
@@ -28,7 +28,7 @@ const sections = doctorsData.map((section) => ({
   category: section.category,
   doctors: section.doctors.flatMap((doc) => {
     const profile = getDoctorProfile(doc.name);
-    if (profile?.disabled) return [];
+    if (!profile || !isDoctorLive(profile)) return [];
 
     return {
       name: doc.name,

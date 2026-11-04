@@ -3,7 +3,7 @@ import {
   ArrowRight, ArrowUpRight, Stethoscope, Baby, Brain, Bone, Ear, Droplets,
   Activity, Scissors, Dumbbell, Ribbon, Pill, Flower2,
 } from "lucide-react";
-import { detailedDoctors, doctorsData } from "@/app/data/doctorsData";
+import { detailedDoctors, doctorsData, isDoctorLive } from "@/app/data/doctorsData";
 import Reveal from "@/components/ui/Reveal";
 
 const disabledDoctorNames = new Set(
@@ -50,7 +50,10 @@ export default function DoctorsPreview() {
 
         <div className="flex flex-wrap justify-center gap-4">
           {doctorsData
-            .filter((section) => section.doctors.some((doctor) => !disabledDoctorNames.has(doctor.name)))
+            .filter((section) => section.doctors.some((doctor) => {
+              const profile = detailedDoctors.find((item) => item.name === doctor.name);
+              return !disabledDoctorNames.has(doctor.name) && (!profile || isDoctorLive(profile));
+            }))
             .map((section) => {
             const Icon = categoryIcons[section.category] || Stethoscope;
             return (

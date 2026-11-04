@@ -3,6 +3,7 @@ import bbkumar from "../assets/doctors/DR-B.B-Kumar.png";
 import drbarundatta from "../assets/doctors/DR-Barun-Datta.png";
 import drKundanKumar from "../assets/doctors/DR-Kundan-Kumar.png";
 import drYRadhakrishna from "../assets/doctors/DR-Y-Radhakrishna.png";
+import drChayanKumarRoy from "../assets/doctors/DR-Chayan-Kumar-Roy.png";
 import drMaitreyeeSarkar from "../assets/doctors/DR-Maitreyee-Sarkar.png";
 import drSarwarHossain from "../assets/doctors/DR-Sarwar-Hossain.png";
 import drSagarMantri from "../assets/doctors/DR-Sagar-Mantri.png";
@@ -11,6 +12,65 @@ import drKunalHaldar from "../assets/doctors/DR-Kunal_Halder.png";
 import drMohitNahata from "../assets/doctors/DR-Mohit-Nahata.png";
 import drMrinalMandal from "../assets/doctors/DR-Mrinal-Mandal.png";
 
+
+const MONTHS = {
+  January: 0,
+  February: 1,
+  March: 2,
+  April: 3,
+  May: 4,
+  June: 5,
+  July: 6,
+  August: 7,
+  September: 8,
+  October: 9,
+  November: 10,
+  December: 11,
+};
+
+export function parseDoctorDate(dateText) {
+  if (!dateText || typeof dateText !== "string") return null;
+
+  const value = dateText.trim();
+  if (!value) return null;
+
+  if (/Every|Daily|Daily in the afternoon|Thursday & Sunday|Saturday|Sunday|Monday|Tuesday|Wednesday|Friday|Weekend/i.test(value)) {
+    return "recurring";
+  }
+
+  const slashMatch = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (slashMatch) {
+    const [, day, month, year] = slashMatch;
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  }
+
+  const longMatch = value.match(/^(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/i);
+  if (longMatch) {
+    const [, day, monthName, year] = longMatch;
+    const monthIndex = MONTHS[monthName];
+    if (monthIndex !== undefined) {
+      return new Date(Number(year), monthIndex, Number(day));
+    }
+  }
+
+  return null;
+}
+
+export function isDoctorLive(doctor) {
+  if (!doctor) return false;
+  if (doctor.disabled) return false;
+
+  const appointmentDate = doctor.appointment?.date;
+  const parsed = parseDoctorDate(appointmentDate);
+
+  if (parsed === "recurring") return true;
+  if (!parsed) return false;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  return parsed >= today;
+}
 
 export const doctorsData = [
   {
@@ -124,6 +184,11 @@ export const doctorsData = [
   {
     category: "Gastroenterologists",
     doctors: [
+      {
+        name: "Dr. Chayan Kumar Roy",
+        info: "M.D. (General Medicine), D.N.B. (Gastroenterology)",
+        timing: "",
+      },
       {
         name: "Dr. Y. Radhakrishna",
         info: "M.D. Medicine (PGI), D.M. Gastroenterology (SGPGI), Fellow in Transplant Hepatology (New York, USA), Fellow in Therapeutic Endoscopy, La Paz, South America",
@@ -403,13 +468,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "7th November 2026",
+      date: "14/11/2026",
       time: "08:30 AM to 10:30 AM",
-      displayDate: "7th November 2026 (1st Saturday)",
+      displayDate: "14/11/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>7th November 2026 (1st Saturday)</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>14/11/2026 (Saturday)</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -478,13 +543,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "10th October 2026",
-      time: "8:00 AM onwards",
-      displayDate: "10th October 2026 (Saturday)",
+      date: "14/11/2026",
+      time: "08:00 AM onwards",
+      displayDate: "14/11/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>10th October 2026</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>14/11/2026 (Saturday)</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -531,6 +596,85 @@ export const detailedDoctors = [
       { icon: "check_circle", title: "Digestive Cancers" },
     ],
     avatar: drYRadhakrishna,
+  },
+
+  // Chayan Kumar Roy
+
+  {
+    slug: "dr-chayan-kumar-roy",
+    name: "Dr. Chayan Kumar Roy",
+    displayName: "DR. CHAYAN KUMAR ROY",
+    specialty: "GASTROENTEROLOGIST",
+    credentials: [
+      { name: "MBBS", type: "normal" },
+      { name: "MD (General Medicine)", type: "normal" },
+      { name: "DNB (Gastroenterology)", type: "highlight" },
+    ],
+    metaItems: [
+      { icon: "work_history", text: "11+ Years Experience" },
+      { icon: "medical_services", text: "Digestive & Liver Care" },
+    ],
+    hospital: "B.R Diagnostic Center",
+    location: {
+      name: "B.R Diagnostic Center - Malda",
+      address: "B.R Diagnostic Center",
+      city: "Malda, West Bengal",
+    },
+    appointment: {
+      date: "11/11/2026",
+      time: "09:00 AM onwards",
+      displayDate: "11/11/2026",
+    },
+    notice: {
+      title: "Special Consultation Camp at Malda",
+      text: "Dr. Chayan Kumar Roy will be available for consultation at B.R Diagnostic Center, Malda on <strong>11/11/2026</strong>. Book your slot now!",
+    },
+    appointmentTypes: [
+      { value: "", label: "Select Type" },
+      { value: "First Consultation", label: "First Consultation" },
+      { value: "Follow-up Visit", label: "Follow-up Visit" },
+      {
+        value: "Gastroenterology Consultation",
+        label: "Gastroenterology Consultation",
+      },
+      { value: "Stomach Care", label: "Stomach Care" },
+    ],
+    concernAreas: [
+      "Indigestion",
+      "Bloating",
+      "Acidity",
+      "Stomach Discomfort",
+      "Digestive Disorders",
+      "Other",
+    ],
+    medicalHistory: {
+      label: "Any Chronic Conditions?",
+      name: "procedure_history",
+      options: [
+        { value: "Yes", label: "Yes" },
+        { value: "No", label: "No", checked: true },
+      ],
+    },
+    trustCredentials: [
+      { icon: "school", title: "MBBS, MD, DNB", subtitle: "Medical Graduate" },
+      { icon: "local_hospital", title: "Gastroenterology Specialist", subtitle: "Digestive Care" },
+      {
+        icon: "verified",
+        title: "Medical Registration Verified",
+        subtitle: "11+ Years Experience",
+      },
+    ],
+    specializations: [
+      { icon: "medical_services", title: "Acid Reflux" },
+      { icon: "healing", title: "Abdominal Pain" },
+      { icon: "local_hospital", title: "Digestive Disorders" },
+      { icon: "bloodtype", title: "Liver Care" },
+    ],
+    specialtyInterests: [
+      { icon: "check_circle", title: "GERD Management" },
+      { icon: "check_circle", title: "Functional Gut Disorders" },
+    ],
+    avatar: drChayanKumarRoy,
   },
 
   // Mohit Nahata
