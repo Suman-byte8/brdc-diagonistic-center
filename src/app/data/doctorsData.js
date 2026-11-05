@@ -383,13 +383,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "29th October 2026",
+      date: "01/12/2026",
       time: "8:30 AM to 11:30 AM",
-      displayDate: "29th October 2026 (Thursday)",
+      displayDate: "01/12/2026 (Tuesday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>29th October 2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. B.B. Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>01/12/2026</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
