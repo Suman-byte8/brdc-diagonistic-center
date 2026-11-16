@@ -468,13 +468,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "14/11/2026",
+      date: "05/12/2026",
       time: "08:30 AM to 10:30 AM",
-      displayDate: "14/11/2026 (Saturday)",
+      displayDate: "05/12/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>14/11/2026 (Saturday)</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
+      text: "Dr. Kundan Kumar will be available for consultation at B.R Diagnostic Center, Malda on <strong>05/12/2026 (Saturday)</strong> from <strong>8:30 AM onwards</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -543,13 +543,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "14/11/2026",
+      date: "05/12/2026",
       time: "08:00 AM onwards",
-      displayDate: "14/11/2026 (Saturday)",
+      displayDate: "05/12/2026 (Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>14/11/2026 (Saturday)</strong>. Book your slot now!",
+      text: "Dr. Y. Radhakrishna will be available for consultation at B.R Diagnostic Center, Malda on <strong>05/12/2026 (Saturday)</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
@@ -602,6 +602,7 @@ export const detailedDoctors = [
 
   {
     slug: "dr-chayan-kumar-roy",
+    disabled: true,
     name: "Dr. Chayan Kumar Roy",
     displayName: "DR. CHAYAN KUMAR ROY",
     specialty: "GASTROENTEROLOGIST",
@@ -1079,6 +1080,7 @@ export const detailedDoctors = [
   // Kunal Haldar
   {
     slug: "dr-kunal-haldar",
+    disabled: true,
     name: "Dr. Kunal Haldar",
     displayName: "DR. KUNAL HALDAR",
     specialty: "CONSULTANT NEPHROLOGIST",
