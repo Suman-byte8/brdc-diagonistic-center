@@ -304,13 +304,13 @@ export const detailedDoctors = [
       city: "Malda, West Bengal",
     },
     appointment: {
-      date: "14th November 2026",
+      date: "12th December 2026",
       time: "10:00 AM to 12:00 PM",
-      displayDate: "14th November 2026 (Saturday)",
+      displayDate: "12th December 2026 (2nd Saturday)",
     },
     notice: {
       title: "Special Consultation Camp at Malda",
-      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>14th November 2026</strong>. Book your slot now!",
+      text: "Brigadier Dr. Barun Datta will be available for consultation at B.R Diagnostic Center, Malda on <strong>12th December 2026 (2nd Saturday)</strong>. Book your slot now!",
     },
     appointmentTypes: [
       { value: "", label: "Select Type" },
